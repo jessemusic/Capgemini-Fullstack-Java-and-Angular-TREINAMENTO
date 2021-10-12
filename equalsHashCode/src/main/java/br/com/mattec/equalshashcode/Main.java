@@ -1,13 +1,35 @@
 package br.com.mattec.equalshashcode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-       // testaCarro();
+        // testaCarro();
+      //  usandoStack();
+        Queue<Carro> queueCarros = new LinkedList<>();
 
+        queueCarros.add(new Carro("Ford"));
+        queueCarros.add(new Carro("Chevrolet"));
+        queueCarros.add(new Carro("Fiat"));
+
+        System.out.println(queueCarros.add(new Carro("Peugeot")));
+        System.out.println(queueCarros);
+        System.out.println(queueCarros.offer(new Carro("Renault")));
+        System.out.println(queueCarros);
+        System.out.println(queueCarros.peek());
+        System.out.println(queueCarros);
+        System.out.println(queueCarros.poll());
+        System.out.println(queueCarros.poll());
+        System.out.println(queueCarros);
+        System.out.println(queueCarros.isEmpty());
+        System.out.println(queueCarros);
+
+
+
+
+    }
+
+    private static void usandoStack() {
         Stack<Carro> stackCarros = new Stack<>();
 
         stackCarros.push(new Carro("Ford"));
@@ -21,10 +43,6 @@ public class Main {
         System.out.println(stackCarros);
 
         System.out.println(stackCarros.empty());
-
-
-
-
     }
 
     private static void testaCarro() {

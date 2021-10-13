@@ -107,15 +107,5 @@ public class ExemploMap {
         System.out.println("Vamos conferir se está vazio");
         System.out.println(carrosPolpulares.isEmpty());
 
-
-
-
-
-
-
-
-
-
-
     }
 }

@@ -38,14 +38,15 @@ public class ExemploMap {
         Double consumoMaisEficiente = Collections.max(carrosPolpulares.values());
         System.out.println(consumoMaisEficiente);
         Set<Map.Entry<String, Double>> entries = carrosPolpulares.entrySet();
-        
-        String modelomjuitomaisEfieciente ="";
+
+        String modeloMuitoMaisEfieciente ="";
         for (Map.Entry<String, Double> entry : entries) {
             if(entry.getValue().equals(consumoMaisEficiente)) {
-                modelomjuitomaisEfieciente = entry.getKey();
-                System.out.println("modelo mais eficiente: " + modelomjuitomaisEfieciente + " --> " + consumoMaisEficiente);
+                modeloMuitoMaisEfieciente = entry.getKey();
+                System.out.println("modelo mais eficiente: " + modeloMuitoMaisEfieciente + " --> " + consumoMaisEficiente);
             }
         }
+      
 
 
     }

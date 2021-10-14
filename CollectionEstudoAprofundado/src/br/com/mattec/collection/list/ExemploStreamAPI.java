@@ -2,8 +2,8 @@ package br.com.mattec.collection.list;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
+import java.util.TreeSet;
+import java.util.function.*;
 import java.util.stream.Collectors;
 
 public class ExemploStreamAPI {
@@ -24,6 +24,25 @@ public class ExemploStreamAPI {
         numerosAleatorios.stream().map(Integer::parseInt).collect(Collectors.toList())
                 .forEach(System.out::println);
 
+        System.out.println("Pegar os número pares maiores que 2 e colocar em uma lista");
+
+        List<Integer> list = numerosAleatorios.stream().map(Integer::parseInt)
+                .filter(x -> (x % 2 == 0) && x > 2)
+                .collect(Collectors.toList());
+        System.out.println(list);
+
+        System.out.println("Mostrar a média dos números");
+        numerosAleatorios.stream().mapToInt(Integer::parseInt)
+                .average().ifPresent(System.out::println);
+
+        System.out.println("Remova os valores ímpares");
+
+        List<Integer> numerosImpares = numerosAleatorios.stream().map(Integer::parseInt).collect(Collectors.toList());
+        numerosImpares.removeIf(integer -> integer % 2 != 0);
+        System.out.println(numerosImpares);
+
+        List<Character> consoantesMeuNome = Arrays.asList('c', 'm', 'l', 'c', 'v', 'l', 'c', 'n', 't');
+        System.out.println(consoantesMeuNome);
 
 
     }
